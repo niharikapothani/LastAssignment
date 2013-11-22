@@ -1,0 +1,37 @@
+Dalvik Virtual Machine Instructions
+____________________________________			   
+
+1) new-instance
+	Syntax- new-instance vx,type
+	Example-  new-instance v0, java.io.FileInputStream // type@0015
+		Instantiates type@0015 (entry #15H in the type table) and puts its reference into v0.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+2) const 
+	a) Instruction Name : Move the given literal value into the register.
+	b) Syntax           : const vAA, #+BBBBBBBB
+	c) Example 	    : const v0, #+444 (moves the hex code value into dalvik register; v0 = 1092 in decimal format)
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+3) branch
+	a) Instruction Name : Branches to the specified instruction step adrress depending on the comparison condition.
+	b) Syntax           : if-test vA, vB, +CCCC
+	c) Example 	    : if-lt v0,v1, +0110 (Branches by incrementing the address by 0110 instruction on less than condition)
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+4) typecast
+	a) Instruction Name : Converts a higher data type to lower type.
+	b) Syntax           : int-to-long va,vb
+	c) Example 	    : int-to-long v1,v0 (Converts the integer type data v0 to long v1)
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+5)
+	a) Instruction Name : Perform the identified array operation at the identified index of the given array, loading or storing into the value register.
+	b) Syntax           : aget vAA, vBB, vCC
+	c) Example 	    : aget v1,v8,v0 (The value v1 is placed into the v8 register holding the array instance at index v0)
+
+--------------------------------------------------------------------------------------------------------------------------------------------

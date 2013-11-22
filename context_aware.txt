@@ -1,0 +1,10 @@
+Example of Context Awareness:
+
+Automatic light as context-aware system
+
+	Basic Technology:
+			At house entrances and in hotel hallways automatic lights have become common. These systems can also be seen as simple context-aware systems. The contextual parameters taken into account are the current light conditions and if there is motion in the vicinity.
+			The adaptation mechanism is fairly simple. If the situation detected is that it is dark and that there is someone moving, the light will be switched on. The light will then be on as long as the person moves, and after a period where no motion is detected, the light will switch off again. Similarly, the light will switch off if it is not dark anymore.
+			
+	The Architecture break-up:
+		 	Sensors provide data about activities and events in the real world. Perception algorithms will make sense of these stimuli and classify the situations into context. Based on the observed context, actions of the system will be triggered.
